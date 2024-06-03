@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #343a40;
+    --card-bg-color: #fff;
+    --card-border-color: #dee2e6;
+    --navbar-bg-color: #343a40;
+    --navbar-text-color: #ffffff;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg-color: #1e1e1e;
+    --card-border-color: #333;
+    --navbar-bg-color: #1e1e1e;
+    --navbar-text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--navbar-bg-color);
+}
+
+.navbar-brand {
+    color: var(--navbar-text-color);
+}
+
+.input-group .form-control {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.list-group-item {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+.card-title {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.spinner-border {
+    margin: 20px 0;
+}
+
+/* Add hover effect to buttons */
+.btn-primary:hover,
+.btn-outline-light:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Add hover effect to navbar links */
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+    transition: color 0.3s ease;
+}
+
+/* Add hover effect to form inputs */
+.input-group .form-control:hover {
+    border-color: #ffc107;
+    transition: border-color 0.3s ease;
+}
+
+/* Add hover effect to list items */
+.list-group-item:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+/* Add animation to card when it appears */
+.card {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
